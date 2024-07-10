@@ -133,7 +133,28 @@ void main()
   // print("Your address is $address");
 
 
+  // String address = 'FF# 1041, Deans Trade Center Peshawar';
+  //
+  // String num1 = '5';
+  // String num2 = '6';
+  //
+  // int n1 = int.parse( num1 );
+  // int n2 = int.parse(num2);
+  //
+  // print(num1 + num2);
+  // print( n1 + n2);
 
+  String n1, n2;
+  print('Enter first number: ');
+  n1 = stdin.readLineSync()!;
+
+  print('Enter second number: ');
+  n2 = stdin.readLineSync()!;
+
+  int x = int.parse(n1);
+  int y = int.parse(n2);
+
+  print('Sum = ${x+y}');
 }
 
 
