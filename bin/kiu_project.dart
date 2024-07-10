@@ -9,6 +9,7 @@
   KIU
 */
 
+import 'dart:io';
 
 void main()
 {
@@ -108,7 +109,42 @@ void main()
   // sum = num1 + num2;
   // print('Sum = $sum');
 
+
+  // int x = 5; // hard coded values
+  // int square = x * x;
+  // print('Square of $x is $square');
+
+  // String? val1;
+  // val1 = 'abc';
+  //
+  // String val2 = val1!;
+
+
+
+
+  // String name, address;
+  // print("Enter your name: ");
+  // name = stdin.readLineSync()!;
+  //
+  // print('Welcome $name');
+  // print("Enter your address: ");
+  // address = stdin.readLineSync()!;
+  //
+  // print("Your address is $address");
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
