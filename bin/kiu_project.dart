@@ -156,23 +156,45 @@ void main()
   //
   // print('Sum = ${x+y}');
 
-  int num;
-  stdout.write('enter a number less than ten: ');
-  num = int.parse( stdin.readLineSync()! );
+  // int num;
+  // stdout.write('enter a number less than ten: ');
+  // num = int.parse( stdin.readLineSync()! );
+  //
+  // if( num < 10 )
+  // {
+  //   print('Shaabaash');
+  // }
+  // else
+  // {
+  //   print('Very Bad');
+  // }
+  //
+  // print("Please don't be late again");
+  // print('End of program');
 
-  if( num < 10 )
-  {
-    print('Shaabaash');
+  int monthNumber;
+  stdout.write('Enter month number : ');
+  monthNumber = int.parse(stdin.readLineSync()!);
+
+  if( monthNumber == 1){
+    print('Jan');
   }
-  else
-  {
-    print('Very Bad');
+
+  if( monthNumber == 2 ){
+    print('Feb');
   }
 
-  print("Please don't be late again");
-  print('End of program');
+  if( monthNumber == 3 ) {
+    print('Mar');
+  }
 
+  if( monthNumber == 12 ){
+    print('Dec');
+  }
 
+  if( monthNumber > 12 ){
+    print('No such month');
+  }
 }
 
 
