@@ -144,18 +144,41 @@ void main()
   // print(num1 + num2);
   // print( n1 + n2);
 
-  String n1, n2;
-  print('Enter first number: ');
-  n1 = stdin.readLineSync()!;
+  // String n1, n2;
+  // print('Enter first number: ');
+  // n1 = stdin.readLineSync()!;
+  //
+  // print('Enter second number: ');
+  // n2 = stdin.readLineSync()!;
+  //
+  // int x = int.parse(n1);
+  // int y = int.parse(n2);
+  //
+  // print('Sum = ${x+y}');
 
-  print('Enter second number: ');
-  n2 = stdin.readLineSync()!;
+  int num;
+  stdout.write('enter a number less than ten: ');
+  num = int.parse( stdin.readLineSync()! );
 
-  int x = int.parse(n1);
-  int y = int.parse(n2);
+  if( num < 10 )
+  {
+    print('Shaabaash');
+  }
+  else
+  {
+    print('Very Bad');
+  }
 
-  print('Sum = ${x+y}');
+  print("Please don't be late again");
+  print('End of program');
+
+
 }
+
+
+
+
+
 
 
 
