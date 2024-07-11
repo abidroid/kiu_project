@@ -172,28 +172,66 @@ void main()
   // print("Please don't be late again");
   // print('End of program');
 
-  int monthNumber;
-  stdout.write('Enter month number : ');
-  monthNumber = int.parse(stdin.readLineSync()!);
+  // int monthNumber;
+  // stdout.write('Enter month number : ');
+  // monthNumber = int.parse(stdin.readLineSync()!);
+  //
+  // if( monthNumber == 1){
+  //   print('Jan');
+  // }
+  //
+  // if( monthNumber == 2 ){
+  //   print('Feb');
+  // }
+  //
+  // if( monthNumber == 3 ) {
+  //   print('Mar');
+  // }
+  //
+  // if( monthNumber == 12 ){
+  //   print('Dec');
+  // }
+  //
+  // if( monthNumber > 12 ){
+  //   print('No such month');
+  // }
 
-  if( monthNumber == 1){
-    print('Jan');
+
+  int n1, n2, choice;
+  stdout.write('Enter first number : ');
+  n1 = int.parse(stdin.readLineSync()!);
+  stdout.write('Enter second number : ');
+  n2 = int.parse(stdin.readLineSync()!);
+
+  String message = '''
+Select Operation
+1. Add
+2. Sub
+3. Mul
+4. Div
+Your choice ? ''';
+
+  stdout.write(message);
+  choice = int.parse(stdin.readLineSync()!);
+
+  if( choice == 1){
+    print('Sum = ${n1+n2}');
   }
 
-  if( monthNumber == 2 ){
-    print('Feb');
+  if( choice == 2 ){
+    print('Difference = ${n1-n2}');
   }
 
-  if( monthNumber == 3 ) {
-    print('Mar');
+  if( choice == 3 ){
+    print('Product = ${n1*n2}');
   }
 
-  if( monthNumber == 12 ){
-    print('Dec');
+  if(choice == 4 ){
+    print('Quotient = ${n1/n2}');
   }
 
-  if( monthNumber > 12 ){
-    print('No such month');
+  if( choice > 4 || choice < 1){
+    print('No such operation code ');
   }
 }
 
