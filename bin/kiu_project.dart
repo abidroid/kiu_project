@@ -179,40 +179,52 @@ void main() {
   // } else {
   //   print('No such month');
   // }
+//
+//
+//   int n1, n2;
+//   String choice;
+//   stdout.write('Enter first number : ');
+//   n1 = int.parse(stdin.readLineSync()!);
+//   stdout.write('Enter second number : ');
+//   n2 = int.parse(stdin.readLineSync()!);
+//
+//   String message = '''
+// Select Operation
+// 1. Add
+// 2. Sub
+// 3. Mul
+// 4. Div
+// Your choice ? ''';
+//
+//   stdout.write(message);
+//   choice = stdin.readLineSync()!;
+//
+//   switch(choice){
+//     case "1":
+//       print("Sum = ${n1+n2}");
+//       break;
+//     case "2":
+//       print("Diff = ${n1-n2}");
+//       break;
+//     case "3":
+//       print('Pro = ${n1*n2}');
+//       break;
+//     case "4":
+//       print("Quo = ${n1/n2}");
+//       break;
+//     default:
+//       print("no such operation");
+//   }
 
 
-  int n1, n2;
-  String choice;
+  int n1, n2, largeNum;
   stdout.write('Enter first number : ');
   n1 = int.parse(stdin.readLineSync()!);
   stdout.write('Enter second number : ');
   n2 = int.parse(stdin.readLineSync()!);
 
-  String message = '''
-Select Operation
-1. Add
-2. Sub
-3. Mul
-4. Div
-Your choice ? ''';
+  largeNum =  (n1 < n2 ) ? n2 : n1;
 
-  stdout.write(message);
-  choice = stdin.readLineSync()!;
+  print('Large Number is $largeNum');
 
-  switch(choice){
-    case "1":
-      print("Sum = ${n1+n2}");
-      break;
-    case "2":
-      print("Diff = ${n1-n2}");
-      break;
-    case "3":
-      print('Pro = ${n1*n2}');
-      break;
-    case "4":
-      print("Quo = ${n1/n2}");
-      break;
-    default:
-      print("no such operation");
-  }
 }
