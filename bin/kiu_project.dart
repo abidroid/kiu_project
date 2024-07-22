@@ -11,13 +11,11 @@
 
 import 'dart:io';
 
-void main()
-{
+void main() {
   // print('Hello World');
   // print(5+5);
   // print('5+5');
   // print(5>3);
-
 
   // Variables
 
@@ -97,7 +95,6 @@ void main()
   //
   // print( 7 % 5 );
 
-
   // int num1, num2, sum; // variable declaration
   //
   // num1 = 7; // initialization
@@ -109,7 +106,6 @@ void main()
   // sum = num1 + num2;
   // print('Sum = $sum');
 
-
   // int x = 5; // hard coded values
   // int square = x * x;
   // print('Square of $x is $square');
@@ -118,9 +114,6 @@ void main()
   // val1 = 'abc';
   //
   // String val2 = val1!;
-
-
-
 
   // String name, address;
   // print("Enter your name: ");
@@ -131,7 +124,6 @@ void main()
   // address = stdin.readLineSync()!;
   //
   // print("Your address is $address");
-
 
   // String address = 'FF# 1041, Deans Trade Center Peshawar';
   //
@@ -176,28 +168,21 @@ void main()
   // stdout.write('Enter month number : ');
   // monthNumber = int.parse(stdin.readLineSync()!);
   //
-  // if( monthNumber == 1){
+  // if (monthNumber == 1) {
   //   print('Jan');
-  // }
-  //
-  // if( monthNumber == 2 ){
+  // } else if (monthNumber == 2) {
   //   print('Feb');
-  // }
-  //
-  // if( monthNumber == 3 ) {
+  // } else if (monthNumber == 3) {
   //   print('Mar');
-  // }
-  //
-  // if( monthNumber == 12 ){
+  // } else if (monthNumber == 12) {
   //   print('Dec');
-  // }
-  //
-  // if( monthNumber > 12 ){
+  // } else {
   //   print('No such month');
   // }
 
 
-  int n1, n2, choice;
+  int n1, n2;
+  String choice;
   stdout.write('Enter first number : ');
   n1 = int.parse(stdin.readLineSync()!);
   stdout.write('Enter second number : ');
@@ -212,59 +197,22 @@ Select Operation
 Your choice ? ''';
 
   stdout.write(message);
-  choice = int.parse(stdin.readLineSync()!);
+  choice = stdin.readLineSync()!;
 
-  if( choice == 1){
-    print('Sum = ${n1+n2}');
-  }
-
-  if( choice == 2 ){
-    print('Difference = ${n1-n2}');
-  }
-
-  if( choice == 3 ){
-    print('Product = ${n1*n2}');
-  }
-
-  if(choice == 4 ){
-    print('Quotient = ${n1/n2}');
-  }
-
-  if( choice > 4 || choice < 1){
-    print('No such operation code ');
+  switch(choice){
+    case "1":
+      print("Sum = ${n1+n2}");
+      break;
+    case "2":
+      print("Diff = ${n1-n2}");
+      break;
+    case "3":
+      print('Pro = ${n1*n2}');
+      break;
+    case "4":
+      print("Quo = ${n1/n2}");
+      break;
+    default:
+      print("no such operation");
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
