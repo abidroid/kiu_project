@@ -217,13 +217,36 @@ void main() {
 //   }
 
 
-  int n1, n2, largeNum;
+  // int n1, n2, largeNum;
+  // stdout.write('Enter first number : ');
+  // n1 = int.parse(stdin.readLineSync()!);
+  // stdout.write('Enter second number : ');
+  // n2 = int.parse(stdin.readLineSync()!);
+  //
+  // largeNum =  (n1 < n2 ) ? n2 : n1;
+  //
+  // print('Large Number is $largeNum');
+
+  int n1, n2, n3, largeNum = -1;
   stdout.write('Enter first number : ');
   n1 = int.parse(stdin.readLineSync()!);
   stdout.write('Enter second number : ');
   n2 = int.parse(stdin.readLineSync()!);
 
-  largeNum =  (n1 < n2 ) ? n2 : n1;
+  stdout.write('Enter third number : ');
+  n3 = int.parse(stdin.readLineSync()!);
+
+  if( n1 > n2 && n1 > n3 ){
+    largeNum = n1;
+  }
+
+  if( n2 > n3 && n2 > n1 ){
+    largeNum = n2;
+  }
+
+  if( n3 > n1 && n3 > n2 ){
+    largeNum = n3;
+  }
 
   print('Large Number is $largeNum');
 
