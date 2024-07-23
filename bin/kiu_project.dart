@@ -226,28 +226,51 @@ void main() {
   // largeNum =  (n1 < n2 ) ? n2 : n1;
   //
   // print('Large Number is $largeNum');
+  //
+  // int n1, n2, n3, largeNum = -1;
+  // stdout.write('Enter first number : ');
+  // n1 = int.parse(stdin.readLineSync()!);
+  // stdout.write('Enter second number : ');
+  // n2 = int.parse(stdin.readLineSync()!);
+  //
+  // stdout.write('Enter third number : ');
+  // n3 = int.parse(stdin.readLineSync()!);
+  //
+  // if( n1 > n2 && n1 > n3 ){
+  //   largeNum = n1;
+  // }
+  //
+  // if( n2 > n3 && n2 > n1 ){
+  //   largeNum = n2;
+  // }
+  //
+  // if( n3 > n1 && n3 > n2 ){
+  //   largeNum = n3;
+  // }
+  //
+  // print('Large Number is $largeNum');
+  //
 
-  int n1, n2, n3, largeNum = -1;
+  int monthNumber;
   stdout.write('Enter first number : ');
-  n1 = int.parse(stdin.readLineSync()!);
-  stdout.write('Enter second number : ');
-  n2 = int.parse(stdin.readLineSync()!);
+  monthNumber = int.parse(stdin.readLineSync()!);
 
-  stdout.write('Enter third number : ');
-  n3 = int.parse(stdin.readLineSync()!);
+  if( monthNumber == 12 || monthNumber == 1 || monthNumber == 2){
+    print('Winter');
+    }
 
-  if( n1 > n2 && n1 > n3 ){
-    largeNum = n1;
+
+  if( monthNumber == 3 || monthNumber == 4 || monthNumber == 5){
+    print('Spring');
   }
 
-  if( n2 > n3 && n2 > n1 ){
-    largeNum = n2;
+
+  if( monthNumber == 6 || monthNumber == 7 || monthNumber == 8 || monthNumber == 9){
+    print('Summer');
   }
 
-  if( n3 > n1 && n3 > n2 ){
-    largeNum = n3;
+
+  if( monthNumber == 10 || monthNumber == 11 ){
+    print('Autumn');
   }
-
-  print('Large Number is $largeNum');
-
 }
