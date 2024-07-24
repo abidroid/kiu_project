@@ -283,11 +283,18 @@ void main() {
   //   i++;
   // }
 
-  int  num;
-  stdout.write('Enter a number : ');
-  num = int.parse(stdin.readLineSync()!);
+  // int  num;
+  // stdout.write('Enter a number : ');
+  // num = int.parse(stdin.readLineSync()!);
+  //
+  // for(int i = 1; i < 11; i++ ){
+  //   print('$num X $i = ${num*i}');
+  // }
 
-  for(int i = 1; i < 11; i++ ){
-    print('$num X $i = ${num*i}');
+  int j = 1;
+
+  while(j < 11 ){
+    print('Pak Zindabad $j');
+    j++;
   }
 }
