@@ -291,10 +291,28 @@ void main() {
   //   print('$num X $i = ${num*i}');
   // }
 
-  int j = 1;
+  // int j = 1;
+  //
+  // while(j < 11 ){
+  //   print('Pak Zindabad $j');
+  //   j++;
+  // }
 
-  while(j < 11 ){
-    print('Pak Zindabad $j');
-    j++;
-  }
+  int n1, n2;
+  String userChoice;
+
+  do
+  {
+    stdout.write('Enter first number : ');
+    n1 = int.parse(stdin.readLineSync()!);
+
+    stdout.write('Enter second number : ');
+    n2 = int.parse(stdin.readLineSync()!);
+
+    print('Sum = ${n1+n2}');
+    stdout.write('Do you want more additions(yes/no)?');
+    userChoice = stdin.readLineSync()!;
+  }while(userChoice == 'yes');
+
+  print('Thank you for using our app');
 }
