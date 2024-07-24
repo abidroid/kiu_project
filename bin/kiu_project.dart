@@ -274,12 +274,20 @@ void main() {
   //   print('Autumn');
   // }
 
-  int i;
-  i = 1;
-  for(; i < 11;  )
-  {
-    print('Shaloom Zindabad $i');
-    print('Maqsood Zindabad $i');
-    i++;
+  // int i;
+  // i = 1;
+  // for(; i < 11;  )
+  // {
+  //   print('Shaloom Zindabad $i');
+  //   print('Maqsood Zindabad $i');
+  //   i++;
+  // }
+
+  int  num;
+  stdout.write('Enter a number : ');
+  num = int.parse(stdin.readLineSync()!);
+
+  for(int i = 1; i < 11; i++ ){
+    print('$num X $i = ${num*i}');
   }
 }
