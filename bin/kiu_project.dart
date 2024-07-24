@@ -251,26 +251,35 @@ void main() {
   // print('Large Number is $largeNum');
   //
 
-  int monthNumber;
-  stdout.write('Enter first number : ');
-  monthNumber = int.parse(stdin.readLineSync()!);
+  // int monthNumber;
+  // stdout.write('Enter first number : ');
+  // monthNumber = int.parse(stdin.readLineSync()!);
+  //
+  // if( monthNumber == 12 || monthNumber == 1 || monthNumber == 2){
+  //   print('Winter');
+  //   }
+  //
+  //
+  // if( monthNumber == 3 || monthNumber == 4 || monthNumber == 5){
+  //   print('Spring');
+  // }
+  //
+  //
+  // if( monthNumber == 6 || monthNumber == 7 || monthNumber == 8 || monthNumber == 9){
+  //   print('Summer');
+  // }
+  //
+  //
+  // if( monthNumber == 10 || monthNumber == 11 ){
+  //   print('Autumn');
+  // }
 
-  if( monthNumber == 12 || monthNumber == 1 || monthNumber == 2){
-    print('Winter');
-    }
-
-
-  if( monthNumber == 3 || monthNumber == 4 || monthNumber == 5){
-    print('Spring');
-  }
-
-
-  if( monthNumber == 6 || monthNumber == 7 || monthNumber == 8 || monthNumber == 9){
-    print('Summer');
-  }
-
-
-  if( monthNumber == 10 || monthNumber == 11 ){
-    print('Autumn');
+  int i;
+  i = 1;
+  for(; i < 11;  )
+  {
+    print('Shaloom Zindabad $i');
+    print('Maqsood Zindabad $i');
+    i++;
   }
 }
