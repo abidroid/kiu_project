@@ -217,7 +217,6 @@ void main() {
 //       print("no such operation");
 //   }
 
-
   // int n1, n2, largeNum;
   // stdout.write('Enter first number : ');
   // n1 = int.parse(stdin.readLineSync()!);
@@ -317,7 +316,6 @@ void main() {
   //
   // print('Thank you for using our app');
 
-
   // Number guessing game
   // first how to generate random number
 
@@ -349,48 +347,52 @@ void main() {
   Collections
    */
 
-  List<String> names = [ 'Sibtain'];
+  // List<String> names = [ 'Sibtain'];
+  //
+  // names.add('Hasnain Haider');
+  // names.add('Basit Ali');
+  // names.add('Anjum Shaheen');
+  //
+  // names.insert(1,'Zeeshan');
+  // names.add('Kashif');
+  //
+  // names[0] = 'Sibtain Ali';
+  //
+  // for( int i = 0; i < names.length; i++ ){
+  //   print(names[i]);
+  // }
+  //
+  // // for each loop
+  // print('For each loop');
+  //
+  // // Traversal
+  //
+  // for( String nom in names){
+  //   print(nom);
+  // }
+  //
+  // print('////////////////////////');
+  // names.forEach((String item){
+  //   print(item);
+  // });
 
-  names.add('Hasnain Haider');
-  names.add('Basit Ali');
-  names.add('Anjum Shaheen');
+  List<String> shoppingList = [
+    'Milk',
+    'Honey',
+    'Bread',
+    'Pampers',
+    'Vegetables',
+  ];
 
-  names.insert(1,'Zeeshan');
-  names.add('Kashif');
-
-  names[0] = 'Sibtain Ali';
-
-  for( int i = 0; i < names.length; i++ ){
-    print(names[i]);
-  }
-
-  // for each loop
-  print('For each loop');
-
-  // Traversal
-
-  for( String nom in names){
-    print(nom);
-  }
-
-  print('////////////////////////');
-  names.forEach((String item){
+  for (String item in shoppingList) {
     print(item);
-  });
+  }
 
+  List studentInfo = [
+    'Abid',
+    4.4,
+    true,
+  ];
+
+  print(studentInfo.runtimeType);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
