@@ -376,23 +376,79 @@ void main() {
   //   print(item);
   // });
 
-  List<String> shoppingList = [
-    'Milk',
-    'Honey',
-    'Bread',
-    'Pampers',
-    'Vegetables',
+  // List<String> shoppingList = [
+  //   'Milk',
+  //   'Honey',
+  //   'Bread',
+  //   'Pampers',
+  //   'Vegetables',
+  // ];
+  //
+  // for (String item in shoppingList) {
+  //   print(item);
+  // }
+  //
+  // List studentInfo = [
+  //   'Abid',
+  //   4.4,
+  //   true,
+  // ];
+  //
+  // print(studentInfo.runtimeType);
+
+  // Map<Key, Value>
+
+  // Map<String, double> scores = {
+  //   'sibtain': 3.3,
+  //   'basit': 3.3,
+  //   'haider': 4.0,
+  // };
+  // scores['anjum'] = 3.8;
+  //
+  //
+  // print(scores['haider']);
+  // print(scores['basit']);
+  //
+  // print(scores.isNotEmpty);
+  //
+  // Map<int, String> months = {
+  //   1: "Jan",
+  //   2 : "Feb",
+  //   3 : "Mar",
+  // };
+  //
+  // print(months[1]);
+
+  Map<String, dynamic> std1 = {
+    "reg_num": 2089,
+    "name": "Naveed Khan",
+    "is_married": false,
+    "gpa": 3.3,
+  };
+
+
+  Map<String, dynamic> std2 = {
+    "reg_num": 2099,
+    "name": "Basit Khan",
+    "is_married": true,
+    "gpa": 3.3,
+  };
+
+
+  Map<String, dynamic> std3 = {
+    "reg_num": 1089,
+    "name": "Mehreen Khan",
+    "is_married": false,
+    "gpa": 3.4,
+  };
+
+  List<Map<String, dynamic>> studentsList = [
+    std1,std2, std3,
   ];
 
-  for (String item in shoppingList) {
-    print(item);
+  for( var studentRecord in studentsList) {
+
+    print(studentRecord);
+
   }
-
-  List studentInfo = [
-    'Abid',
-    4.4,
-    true,
-  ];
-
-  print(studentInfo.runtimeType);
 }
