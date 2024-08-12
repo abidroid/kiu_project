@@ -22,9 +22,12 @@ void table( {required int num,required int range} ) {
   }
 }
 
-// Boss
-void main() {
-  table(num: 7, range: 10);
-  table(range: 20, num: 4);
+double square( double num ){
+  return num*num;
+}
 
+// Boss
+void main()
+{
+  print( square( square(2) ) );
 }
