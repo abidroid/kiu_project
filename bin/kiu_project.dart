@@ -1,33 +1,92 @@
-import 'dart:io';
-
-// User Defined Functions
-void displayStars() => print('*****************************************');
-
-void drawLine(String symbol) {
-  for (var i = 1; i <= 30; i++) {
-    stdout.write(symbol);
-  }
-  print('');
-}
-
-// sub program
-// Positional parameters
-void sum(int num1, int num2) => print('Sum = ${num1 + num2}');
-
-void table({required int num, required int range}) {
-  for (var i = 1; i <= range; i++) {
-    print('$num X $i = ${num * i}');
-  }
-}
-
-double square(double num) {
-  return num * num;
-}
-
-double globalVariable = 4;
-// Boss
+// camel Case, variable, functions
 void main() {
-  globalVariable = square(square(globalVariable));
+  JavelinPlayer arshad = JavelinPlayer(
+    name: 'Arshad Nadeem',
+    country: 'Pakistan',
+    longestThrow: 92.97,
+  );
 
-  print(globalVariable);
+  arshad.display();
+
+  JavelinPlayer neeraj = JavelinPlayer(
+    name: 'Neeraj Chopra',
+    country: 'India',
+    longestThrow: 89.45,
+  );
+
+  neeraj.display();
+
+  List<JavelinPlayer> players = [
+    arshad,
+    neeraj,
+    JavelinPlayer(
+      name: 'Abid',
+      country: 'Pakistan',
+      longestThrow: 100.0,
+    ),
+  ];
+}
+
+void signUp() {
+  print('Sign Up now');
+}
+
+// User Defined Data Types
+class Student {
+  // data members
+  late String name;
+  late String email;
+  late String regNum;
+  late String? mobile;
+
+  // constructor
+  // use to intialize object
+
+  // Parameterized constructor
+  // positional
+  Student({
+    required this.name,
+    required this.email,
+    required this.regNum,
+    String? mobile,
+  });
+
+  // method
+  void displayInfo() {
+    print(name);
+    print(email);
+    print(regNum);
+    print(mobile);
+  }
+}
+
+// Widget
+class Button {
+  late String label;
+  late String bgColor;
+  late Function onTap;
+
+  Button({
+    required this.label,
+    required this.bgColor,
+    required this.onTap,
+  });
+}
+
+class JavelinPlayer {
+  String name;
+  String country;
+  double longestThrow;
+
+  JavelinPlayer({
+    required this.name,
+    required this.country,
+    required this.longestThrow,
+  });
+
+  void display(){
+    print('Name: $name');
+    print('Country: $country');
+    print('Longest Throw: $longestThrow');
+  }
 }
