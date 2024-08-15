@@ -1,92 +1,129 @@
-// camel Case, variable, functions
 void main() {
-  JavelinPlayer arshad = JavelinPlayer(
-    name: 'Arshad Nadeem',
-    country: 'Pakistan',
-    longestThrow: 92.97,
+  Doctor ali = Doctor(
+      name: 'Ali',
+      dob: '1st Nov',
+      gender: 'M',
+      spe: 'ENT',
+      fee: 3000.0,
+      clinicTime: '4pm - 8pm',
+      address: Address(
+        houseNum: '1',
+        streetNum: '5',
+        city: 'Gilgit',
+      ));
+
+  // ali.displayPerson();
+  // ali.displayDoctor();
+
+  Beggar shehbaz = PoliticalBeggar(
+    name: 'Shehbaz Sharif',
+    dob: '2 Aug',
+    gender: 'M',
+    loc: 'Pak',
+    dailyIncome: 1000.0,
+    province: 'Punjab',
+    rank: 'Prime Minister',
   );
 
-  arshad.display();
+  shehbaz.displayPerson();
+  shehbaz.displayBeggar();
 
-  JavelinPlayer neeraj = JavelinPlayer(
-    name: 'Neeraj Chopra',
-    country: 'India',
-    longestThrow: 89.45,
-  );
+  List<Doctor> doctors = [];
+  List<Beggar> beggars = [ali, shehbaz];
 
-  neeraj.display();
-
-  List<JavelinPlayer> players = [
-    arshad,
-    neeraj,
-    JavelinPlayer(
-      name: 'Abid',
-      country: 'Pakistan',
-      longestThrow: 100.0,
-    ),
-  ];
+  List<Person> persons = [ ali, shehbaz ];
 }
 
-void signUp() {
-  print('Sign Up now');
-}
-
-// User Defined Data Types
-class Student {
-  // data members
-  late String name;
-  late String email;
-  late String regNum;
-  late String? mobile;
-
-  // constructor
-  // use to intialize object
-
-  // Parameterized constructor
-  // positional
-  Student({
-    required this.name,
-    required this.email,
-    required this.regNum,
-    String? mobile,
-  });
-
-  // method
-  void displayInfo() {
-    print(name);
-    print(email);
-    print(regNum);
-    print(mobile);
-  }
-}
-
-// Widget
-class Button {
-  late String label;
-  late String bgColor;
-  late Function onTap;
-
-  Button({
-    required this.label,
-    required this.bgColor,
-    required this.onTap,
-  });
-}
-
-class JavelinPlayer {
+class Person {
   String name;
-  String country;
-  double longestThrow;
+  String dob;
+  String gender;
 
-  JavelinPlayer({
+  Person({
     required this.name,
-    required this.country,
-    required this.longestThrow,
+    required this.dob,
+    required this.gender,
   });
 
-  void display(){
+  void displayPerson() {
     print('Name: $name');
-    print('Country: $country');
-    print('Longest Throw: $longestThrow');
+    print('DOB: $dob');
+    print('Gender: $gender');
   }
+}
+
+class Doctor extends Person {
+  String spe;
+  double fee;
+  String clinicTime;
+  Address address;
+
+  Doctor({
+    required String name,
+    required String dob,
+    required String gender,
+    required this.spe,
+    required this.fee,
+    required this.clinicTime,
+    required this.address,
+  }) : super(name: name, dob: dob, gender: gender);
+
+  void displayDoctor() {
+    print('Specialization: $spe');
+    print('Fee: $fee');
+    print('Clinic Time: $clinicTime');
+  }
+}
+
+class Beggar extends Person {
+  String loc;
+  double dailyIncome;
+
+  Beggar({
+    required String name,
+    required String dob,
+    required String gender,
+    required this.loc,
+    required this.dailyIncome,
+  }) : super(name: name, dob: dob, gender: gender);
+
+  void displayBeggar() {
+    print('Location: $loc');
+    print('Daily Income: $dailyIncome');
+  }
+}
+
+class PoliticalBeggar extends Beggar {
+  String province;
+  String rank;
+
+  PoliticalBeggar({
+    required String name,
+    required String dob,
+    required String gender,
+    required String loc,
+    required double dailyIncome,
+    required this.province,
+    required this.rank,
+  }) : super(
+          name: name,
+          dob: dob,
+          gender: gender,
+          loc: loc,
+          dailyIncome: dailyIncome,
+        );
+}
+
+class Address {
+  String houseNum;
+  String streetNum;
+  String city;
+  String? country;
+
+  Address({
+    required this.houseNum,
+    required this.streetNum,
+    required this.city,
+    this.country,
+  });
 }
